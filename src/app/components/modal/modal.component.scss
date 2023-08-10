@@ -1,0 +1,49 @@
+.has-issues {
+  display: flex;
+
+  & span {
+    margin-left: 3%;
+  }
+
+  &-yes {
+    transform: rotate(45deg);
+    height: 23px;
+    width: 10px;
+    margin-left: 50%;
+    border-bottom: 4px solid darkolivegreen;
+    border-right: 4px solid darkolivegreen;
+  }
+
+  &-no {
+    margin-left: 50%;
+
+    &::before,
+    &::after {
+      margin-left: 20%;
+      position: absolute;
+      content: ' ';
+      left: 12px;
+      height: 24px;
+      width: 4px;
+      background-color: red;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+
+  & p {
+    padding-bottom: 5px;
+    margin: 0;
+  }
+}

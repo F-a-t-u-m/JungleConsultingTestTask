@@ -1,0 +1,12 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{ repo.name | uppercase }}</h4>
+  <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>Description: {{ repo.description }}</p>
+  <p>Language: {{ repo.language }}</p>
+  <p class="has-issues">Has Issues: <span [ngClass]="{'has-issues-yes': repo.has_issues, 'has-issues-no': !repo.has_issues}"></span></p>
+  <a [href]="repo.html_url" target="_blank">Open repository in new window</a>
+</div>
